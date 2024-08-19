@@ -1,6 +1,4 @@
-﻿using System.Text;
-using System.Text.Json;
-using StreamListener.Helpers;
+﻿using StreamListener.Helpers;
 using StreamListener.Helpers.Payloads;
 using TikTokLiveSharp.Client;
 using TikTokLiveSharp.Events;
@@ -40,6 +38,7 @@ public class TiktokHandlers
         var message = new CommentMessage
         {
             Identifier = e.Sender.UniqueId,
+            Follower = e.Sender.IsFollower,
             Payload = new CommentPayload
             {
                 Message = e.Message
@@ -54,7 +53,8 @@ public class TiktokHandlers
         Logger.Info($"{e.User?.UniqueId} followed!", ConsoleColor.DarkRed);
         var message = new FollowerMessage
         {
-            Identifier = e.User?.UniqueId
+            Identifier = e.User?.UniqueId,
+            Follower = e.User?.IsFollower ?? false,
         };
         
         await SubscriptionManager.NotifySubscriptions(message);
@@ -75,9 +75,22 @@ public class TiktokHandlers
         //Logger.Info($"{e.Sender.UniqueId} liked!", ConsoleColor.Red);
     }
 
-    public static void OnGiftMessage(TikTokLiveClient sender, GiftMessage e)
+    public static async void OnGiftMessage(TikTokLiveClient sender, TikTokLiveSharp.Events.GiftMessage e)
     {
         Logger.Info($"{e.User.UniqueId} sent {e.Amount}x {e.Gift.Name}!", ConsoleColor.Magenta);
+        var message = new Helpers.GiftMessage
+        {
+            Identifier = e.User.UniqueId,
+            Follower = e.User.IsFollower,
+            Payload = new GiftPayload
+            {
+                Name = e.Gift.Name,
+                Amount = e.Amount,
+                DiamondCost = e.Gift.DiamondCost
+            }
+        };
+        
+        await SubscriptionManager.NotifySubscriptions(message);
     }
 
     public static void OnEmote(TikTokLiveClient sender, EmoteChat e)
