@@ -1,4 +1,6 @@
-﻿using StreamListener.Helpers;
+﻿using System.Text;
+using System.Text.Json;
+using StreamListener.Helpers;
 using TikTokLiveSharp.Client;
 using TikTokLiveSharp.Events;
 
@@ -31,14 +33,33 @@ public class TiktokHandlers
         Logger.Info($"{e.User.UniqueId} joined!", ConsoleColor.Green);
     }
 
-    public static void OnComment(TikTokLiveClient sender, Chat e)
+    public static async void OnComment(TikTokLiveClient sender, Chat e)
     {
         Logger.Info($"{e.Sender.UniqueId}: {e.Message}", ConsoleColor.Yellow);
+        var message = new CommentMessage
+        {
+            Identifier = e.Sender.UniqueId,
+            Message = e.Message
+        };
+        
+        var json = JsonSerializer.Serialize(message);
+        var data = Encoding.UTF8.GetBytes(json);
+
+        await SubscriptionManager.NotifySubscriptions(Events.OnComment, data);
     }
 
-    public static void OnFollow(TikTokLiveClient sender, Follow e)
+    public static async void OnFollow(TikTokLiveClient sender, Follow e)
     {
         Logger.Info($"{e.User?.UniqueId} followed!", ConsoleColor.DarkRed);
+        var message = new FollowerMessage
+        {
+            Identifier = e.User?.UniqueId
+        };
+        
+        var json = JsonSerializer.Serialize(message);
+        var data = Encoding.UTF8.GetBytes(json);
+
+        await SubscriptionManager.NotifySubscriptions(Events.OnFollow, data);
     }
 
     public static void OnShare(TikTokLiveClient sender, Share e)

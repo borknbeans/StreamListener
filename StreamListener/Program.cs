@@ -12,7 +12,7 @@ namespace StreamListener;
 
 public class Program
 {
-    private const string TiktokName = "happyhappygaltv";
+    private const string TiktokName = "yoyo_savagemike";
     
     public static async Task Main(string[] args)
     {
@@ -21,7 +21,7 @@ public class Program
         httpListener.Start();
         Logger.Info("Server started...", ConsoleColor.Green);
 
-        //await ConnectToTiktok();
+        ConnectToTiktok(); // We do not want to wait this because it will hold up the server
         
         while (true)
         {

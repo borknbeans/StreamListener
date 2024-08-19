@@ -18,3 +18,4 @@ C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\prot
 C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\TikTokLiveSharp.dll
 C:\Users\ebork\RiderProjects\StreamListener\StreamListener\obj\Debug\net8.0\StreamListener.csproj.AssemblyReference.cache
 C:\Users\ebork\RiderProjects\StreamListener\StreamListener\obj\Debug\net8.0\StreamListener.csproj.CopyComplete
+C:\Users\ebork\RiderProjects\StreamListener\StreamListener\obj\Debug\net8.0\StreamListener.sourcelink.json

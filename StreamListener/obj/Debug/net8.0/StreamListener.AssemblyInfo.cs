@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StreamListener")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1045d3e2e53c4e42ba07e2b066900dc990825700")]
 [assembly: System.Reflection.AssemblyProductAttribute("StreamListener")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StreamListener")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
