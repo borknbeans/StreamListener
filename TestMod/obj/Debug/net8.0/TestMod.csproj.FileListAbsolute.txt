@@ -1,0 +1,14 @@
+C:\Users\ebork\RiderProjects\StreamListener\TestMod\bin\Debug\net8.0\TestMod.exe
+C:\Users\ebork\RiderProjects\StreamListener\TestMod\bin\Debug\net8.0\TestMod.deps.json
+C:\Users\ebork\RiderProjects\StreamListener\TestMod\bin\Debug\net8.0\TestMod.runtimeconfig.json
+C:\Users\ebork\RiderProjects\StreamListener\TestMod\bin\Debug\net8.0\TestMod.dll
+C:\Users\ebork\RiderProjects\StreamListener\TestMod\bin\Debug\net8.0\TestMod.pdb
+C:\Users\ebork\RiderProjects\StreamListener\TestMod\obj\Debug\net8.0\TestMod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ebork\RiderProjects\StreamListener\TestMod\obj\Debug\net8.0\TestMod.AssemblyInfoInputs.cache
+C:\Users\ebork\RiderProjects\StreamListener\TestMod\obj\Debug\net8.0\TestMod.AssemblyInfo.cs
+C:\Users\ebork\RiderProjects\StreamListener\TestMod\obj\Debug\net8.0\TestMod.csproj.CoreCompileInputs.cache
+C:\Users\ebork\RiderProjects\StreamListener\TestMod\obj\Debug\net8.0\TestMod.dll
+C:\Users\ebork\RiderProjects\StreamListener\TestMod\obj\Debug\net8.0\refint\TestMod.dll
+C:\Users\ebork\RiderProjects\StreamListener\TestMod\obj\Debug\net8.0\TestMod.pdb
+C:\Users\ebork\RiderProjects\StreamListener\TestMod\obj\Debug\net8.0\TestMod.genruntimeconfig.cache
+C:\Users\ebork\RiderProjects\StreamListener\TestMod\obj\Debug\net8.0\ref\TestMod.dll

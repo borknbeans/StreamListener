@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamListener", "StreamListener\StreamListener.csproj", "{142A212B-04A6-4BAC-93AE-195D8E1E86AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMod", "TestMod\TestMod.csproj", "{EE5305B4-72E0-4C63-89BC-DCAAB44372EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{142A212B-04A6-4BAC-93AE-195D8E1E86AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{142A212B-04A6-4BAC-93AE-195D8E1E86AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{142A212B-04A6-4BAC-93AE-195D8E1E86AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{142A212B-04A6-4BAC-93AE-195D8E1E86AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE5305B4-72E0-4C63-89BC-DCAAB44372EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE5305B4-72E0-4C63-89BC-DCAAB44372EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE5305B4-72E0-4C63-89BC-DCAAB44372EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE5305B4-72E0-4C63-89BC-DCAAB44372EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
