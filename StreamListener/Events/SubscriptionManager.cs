@@ -1,4 +1,6 @@
 ﻿using System.Net.WebSockets;
+using System.Text;
+using System.Text.Json;
 
 namespace StreamListener.Helpers;
 
@@ -32,6 +34,20 @@ public class SubscriptionManager
         return new List<WebSocket>();
     }
 
+    public static async Task NotifySubscriptions<T>(BaseMessage<T> message)
+    {
+        List<WebSocket> subscriptions = GetSubscriptions(message.Type);
+        
+        var json = JsonSerializer.Serialize(message);
+        var data = Encoding.UTF8.GetBytes(json);
+
+        foreach (var webSocket in subscriptions)
+        {
+            await webSocket.SendAsync(new ArraySegment<byte>(data), WebSocketMessageType.Text, true,
+                CancellationToken.None);
+        }
+    }
+    
     public static async Task NotifySubscriptions(Events eventType, byte[] data)
     {
         List<WebSocket> subscriptions = GetSubscriptions(eventType);

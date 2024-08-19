@@ -12,7 +12,7 @@ namespace StreamListener;
 
 public class Program
 {
-    private const string TiktokName = "yoyo_savagemike";
+    private const string TiktokName = "jprospering";
     
     public static async Task Main(string[] args)
     {

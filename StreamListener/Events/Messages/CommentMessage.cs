@@ -1,8 +1,8 @@
-﻿namespace StreamListener.Helpers;
+﻿using StreamListener.Helpers.Payloads;
 
-public class CommentMessage
+namespace StreamListener.Helpers;
+
+public class CommentMessage : BaseMessage<CommentPayload>
 {
-    public string Type = "comment";
-    public string Identifier { get; set; }
-    public string Message { get; set; }
+    public CommentMessage() : base(Events.OnComment) { }
 }

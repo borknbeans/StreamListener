@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using System.Text.Json;
 using StreamListener.Helpers;
+using StreamListener.Helpers.Payloads;
 using TikTokLiveSharp.Client;
 using TikTokLiveSharp.Events;
 
@@ -20,17 +21,17 @@ public class TiktokHandlers
 
     public static void OnViewerData(TikTokLiveClient sender, RoomUpdate e)
     {
-        Logger.Info($"Viewer count is: {e.NumberOfViewers}", ConsoleColor.Cyan);
+        //Logger.Info($"Viewer count is: {e.NumberOfViewers}", ConsoleColor.Cyan);
     }
 
     public static void OnLiveEnded(TikTokLiveClient sender, ControlMessage e)
     {
-        Logger.Info("Host ended Stream!");
+        //Logger.Info("Host ended Stream!");
     }
 
     public static void OnJoin(TikTokLiveClient sender, Join e)
     {
-        Logger.Info($"{e.User.UniqueId} joined!", ConsoleColor.Green);
+        //Logger.Info($"{e.User.UniqueId} joined!", ConsoleColor.Green);
     }
 
     public static async void OnComment(TikTokLiveClient sender, Chat e)
@@ -39,13 +40,13 @@ public class TiktokHandlers
         var message = new CommentMessage
         {
             Identifier = e.Sender.UniqueId,
-            Message = e.Message
+            Payload = new CommentPayload
+            {
+                Message = e.Message
+            }
         };
         
-        var json = JsonSerializer.Serialize(message);
-        var data = Encoding.UTF8.GetBytes(json);
-
-        await SubscriptionManager.NotifySubscriptions(Events.OnComment, data);
+        await SubscriptionManager.NotifySubscriptions(message);
     }
 
     public static async void OnFollow(TikTokLiveClient sender, Follow e)
@@ -56,25 +57,22 @@ public class TiktokHandlers
             Identifier = e.User?.UniqueId
         };
         
-        var json = JsonSerializer.Serialize(message);
-        var data = Encoding.UTF8.GetBytes(json);
-
-        await SubscriptionManager.NotifySubscriptions(Events.OnFollow, data);
+        await SubscriptionManager.NotifySubscriptions(message);
     }
 
     public static void OnShare(TikTokLiveClient sender, Share e)
     {
-        Logger.Info($"{e.User?.UniqueId} shared!", ConsoleColor.Blue);
+        //Logger.Info($"{e.User?.UniqueId} shared!", ConsoleColor.Blue);
     }
 
     public static void OnSubscribe(TikTokLiveClient sender, Subscribe e)
     {
-        Logger.Info($"{e.User.UniqueId} subscribed!", ConsoleColor.DarkCyan);
+        //Logger.Info($"{e.User.UniqueId} subscribed!", ConsoleColor.DarkCyan);
     }
 
     public static void OnLike(TikTokLiveClient sender, Like e)
     {
-        Logger.Info($"{e.Sender.UniqueId} liked!", ConsoleColor.Red);
+        //Logger.Info($"{e.Sender.UniqueId} liked!", ConsoleColor.Red);
     }
 
     public static void OnGiftMessage(TikTokLiveClient sender, GiftMessage e)
@@ -84,6 +82,6 @@ public class TiktokHandlers
 
     public static void OnEmote(TikTokLiveClient sender, EmoteChat e)
     {
-        Logger.Info($"{e.User.UniqueId} sent {e.Emotes?.First()?.Id}!", ConsoleColor.DarkGreen);
+        //Logger.Info($"{e.User.UniqueId} sent {e.Emotes?.First()?.Id}!", ConsoleColor.DarkGreen);
     }
 }

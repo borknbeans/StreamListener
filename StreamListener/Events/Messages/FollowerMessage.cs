@@ -1,7 +1,8 @@
-﻿namespace StreamListener.Helpers;
+﻿using StreamListener.Helpers.Payloads;
 
-public class FollowerMessage
+namespace StreamListener.Helpers;
+
+public class FollowerMessage : BaseMessage<FollowerPayload>
 {
-    public string Type = "follower";
-    public string Identifier { get; set; }
+    public FollowerMessage() : base(Events.OnFollow) { }
 }
