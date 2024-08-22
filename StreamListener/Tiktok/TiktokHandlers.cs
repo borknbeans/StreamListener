@@ -10,12 +10,12 @@ public class TiktokHandlers
 {
     public static void OnConnected(TikTokLiveClient sender, bool e)
     {
-        Logger.Info($"Connected to Room! [Connected:{e}]");
+        Logger.Info($"Connected to TikTok!");
     }
 
     public static void OnDisconnected(TikTokLiveClient sender, bool e)
     {
-        Logger.Info($"Disconnected from Room! [Connected:{e}]");
+        Logger.Info($"Disconnected from TikTok!");
     }
 
     public static void OnViewerData(TikTokLiveClient sender, RoomUpdate e)
@@ -35,7 +35,7 @@ public class TiktokHandlers
 
     public static async void OnComment(TikTokLiveClient sender, Chat e)
     {
-        Logger.Info($"{e.Sender.UniqueId}: {e.Message}", ConsoleColor.Yellow);
+        Logger.Info($"[TikTok] {e.Sender.UniqueId}: {e.Message}", ConsoleColor.Yellow);
         
         if (e.Message.StartsWith("!"))
         {

@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("ea611201-05e2-4e06-a9f0-67f55fcd36b4")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("StreamListener")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c09a29eb2a0b647a8c868be61e64dfd90dae6384")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+69302d7b70cb6986903a29b2577d9f67cf44171a")]
 [assembly: System.Reflection.AssemblyProductAttribute("StreamListener")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StreamListener")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

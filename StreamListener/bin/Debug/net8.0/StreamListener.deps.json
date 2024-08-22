@@ -8,11 +8,130 @@
     ".NETCoreApp,Version=v8.0": {
       "StreamListener/1.0.0": {
         "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.0-preview.7.24405.7",
+          "Microsoft.Extensions.Configuration.UserSecrets": "9.0.0-preview.7.24405.7",
           "System.Speech": "9.0.0-preview.7.24405.7",
-          "TikTokLive_Sharp": "1.2.0"
+          "TikTokLive_Sharp": "1.2.0",
+          "TwitchLib.Client": "4.0.0-preview-fd131763416cb9f1a31705ca609566d7e7e7fac8",
+          "TwitchLib.Client.Enums": "4.0.0-preview-fd131763416cb9f1a31705ca609566d7e7e7fac8"
         },
         "runtime": {
           "StreamListener.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration/9.0.0-preview.7.24405.7": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.0-preview.7.24405.7",
+          "Microsoft.Extensions.Primitives": "9.0.0-preview.7.24405.7"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Configuration.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.40507"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/9.0.0-preview.7.24405.7": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "9.0.0-preview.7.24405.7"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.40507"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration.FileExtensions/9.0.0-preview.7.24405.7": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.0-preview.7.24405.7",
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.0-preview.7.24405.7",
+          "Microsoft.Extensions.FileProviders.Abstractions": "9.0.0-preview.7.24405.7",
+          "Microsoft.Extensions.FileProviders.Physical": "9.0.0-preview.7.24405.7",
+          "Microsoft.Extensions.Primitives": "9.0.0-preview.7.24405.7"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.40507"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration.Json/9.0.0-preview.7.24405.7": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.0-preview.7.24405.7",
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.0-preview.7.24405.7",
+          "Microsoft.Extensions.Configuration.FileExtensions": "9.0.0-preview.7.24405.7",
+          "Microsoft.Extensions.FileProviders.Abstractions": "9.0.0-preview.7.24405.7",
+          "System.Text.Json": "9.0.0-preview.7.24405.7"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Configuration.Json.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.40507"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration.UserSecrets/9.0.0-preview.7.24405.7": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.0-preview.7.24405.7",
+          "Microsoft.Extensions.Configuration.Json": "9.0.0-preview.7.24405.7",
+          "Microsoft.Extensions.FileProviders.Abstractions": "9.0.0-preview.7.24405.7",
+          "Microsoft.Extensions.FileProviders.Physical": "9.0.0-preview.7.24405.7"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Configuration.UserSecrets.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.40507"
+          }
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Abstractions/9.0.0-preview.7.24405.7": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "9.0.0-preview.7.24405.7"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.40507"
+          }
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Physical/9.0.0-preview.7.24405.7": {
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Abstractions": "9.0.0-preview.7.24405.7",
+          "Microsoft.Extensions.FileSystemGlobbing": "9.0.0-preview.7.24405.7",
+          "Microsoft.Extensions.Primitives": "9.0.0-preview.7.24405.7"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.FileProviders.Physical.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.40507"
+          }
+        }
+      },
+      "Microsoft.Extensions.FileSystemGlobbing/9.0.0-preview.7.24405.7": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.40507"
+          }
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/7.0.0": {
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
+          }
+        }
+      },
+      "Microsoft.Extensions.Primitives/9.0.0-preview.7.24405.7": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Primitives.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.40507"
+          }
         }
       },
       "Newtonsoft.Json/13.0.3": {
@@ -46,6 +165,15 @@
         }
       },
       "System.Collections.Immutable/7.0.0": {},
+      "System.IO.Pipelines/9.0.0-preview.7.24405.7": {
+        "runtime": {
+          "lib/net8.0/System.IO.Pipelines.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.40507"
+          }
+        }
+      },
+      "System.Memory/4.5.5": {},
       "System.Speech/9.0.0-preview.7.24405.7": {
         "runtime": {
           "lib/net8.0/System.Speech.dll": {
@@ -62,6 +190,34 @@
           }
         }
       },
+      "System.Text.Encodings.Web/9.0.0-preview.7.24405.7": {
+        "runtime": {
+          "lib/net8.0/System.Text.Encodings.Web.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.40507"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll": {
+            "rid": "browser",
+            "assetType": "runtime",
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.40507"
+          }
+        }
+      },
+      "System.Text.Json/9.0.0-preview.7.24405.7": {
+        "dependencies": {
+          "System.IO.Pipelines": "9.0.0-preview.7.24405.7",
+          "System.Text.Encodings.Web": "9.0.0-preview.7.24405.7"
+        },
+        "runtime": {
+          "lib/net8.0/System.Text.Json.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.40507"
+          }
+        }
+      },
       "TikTokLive_Sharp/1.2.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.3",
@@ -73,6 +229,52 @@
             "fileVersion": "1.2.0.0"
           }
         }
+      },
+      "TwitchLib.Client/4.0.0-preview-fd131763416cb9f1a31705ca609566d7e7e7fac8": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "7.0.0",
+          "System.Memory": "4.5.5",
+          "TwitchLib.Client.Enums": "4.0.0-preview-fd131763416cb9f1a31705ca609566d7e7e7fac8",
+          "TwitchLib.Client.Models": "4.0.0-preview-fd131763416cb9f1a31705ca609566d7e7e7fac8",
+          "TwitchLib.Communication": "2.0.0-preview-b5bf10f12e8d7c9d0a82f7f5026dccdf97a97c41"
+        },
+        "runtime": {
+          "lib/netstandard2.0/TwitchLib.Client.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "TwitchLib.Client.Enums/4.0.0-preview-fd131763416cb9f1a31705ca609566d7e7e7fac8": {
+        "runtime": {
+          "lib/netstandard2.0/TwitchLib.Client.Enums.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "TwitchLib.Client.Models/4.0.0-preview-fd131763416cb9f1a31705ca609566d7e7e7fac8": {
+        "dependencies": {
+          "System.Memory": "4.5.5",
+          "TwitchLib.Client.Enums": "4.0.0-preview-fd131763416cb9f1a31705ca609566d7e7e7fac8"
+        },
+        "runtime": {
+          "lib/netstandard2.0/TwitchLib.Client.Models.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "TwitchLib.Communication/2.0.0-preview-b5bf10f12e8d7c9d0a82f7f5026dccdf97a97c41": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "7.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/TwitchLib.Communication.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
       }
     }
   },
@@ -81,6 +283,76 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.Extensions.Configuration/9.0.0-preview.7.24405.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UZGC/QiEjoA2ew5BWe5KYWxMRICwuOvzfASzP2ExuOKQWgr2IAuvhnP3OGXOuodpBDuP3rbqIfs1JbGvBqTfXw==",
+      "path": "microsoft.extensions.configuration/9.0.0-preview.7.24405.7",
+      "hashPath": "microsoft.extensions.configuration.9.0.0-preview.7.24405.7.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/9.0.0-preview.7.24405.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-js6hxltWDt6xiLuNifDZ8EShtPf9z0XW7ztUPQduSSpbctqbtCwifEDZdL+lUy72aQ1lKGl8hNHiI0Xygwc29Q==",
+      "path": "microsoft.extensions.configuration.abstractions/9.0.0-preview.7.24405.7",
+      "hashPath": "microsoft.extensions.configuration.abstractions.9.0.0-preview.7.24405.7.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.FileExtensions/9.0.0-preview.7.24405.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hiEIABihDzHaHd6Yy1RNEyIThSr4KlvYXCmae97d87D90rmuXe4N3M1QCSIpTGR+CqAAy+6LSTjFGB7VsdMs1g==",
+      "path": "microsoft.extensions.configuration.fileextensions/9.0.0-preview.7.24405.7",
+      "hashPath": "microsoft.extensions.configuration.fileextensions.9.0.0-preview.7.24405.7.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.Json/9.0.0-preview.7.24405.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oBZix/pVtvN56Ah04Seo/A84eX5VW9r28w6A7ldK72U59aHhErrjE43ewISaAhsMwnv/1dc0A6l7SNpzp1gURA==",
+      "path": "microsoft.extensions.configuration.json/9.0.0-preview.7.24405.7",
+      "hashPath": "microsoft.extensions.configuration.json.9.0.0-preview.7.24405.7.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.UserSecrets/9.0.0-preview.7.24405.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-K1jH5vYhAguW/fZH7rozClMT6gGGhafqwAlOoUCMTSIFkqVkv3i1t6h4RptXKYwsbmX6c7yvezAB/kUq91JJfw==",
+      "path": "microsoft.extensions.configuration.usersecrets/9.0.0-preview.7.24405.7",
+      "hashPath": "microsoft.extensions.configuration.usersecrets.9.0.0-preview.7.24405.7.nupkg.sha512"
+    },
+    "Microsoft.Extensions.FileProviders.Abstractions/9.0.0-preview.7.24405.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-So8OfpK9g9L1f0p8u7bCslLdR8niflrClLX7Zz4a48ITvVx5Gt7T3cYnO1lQWdlU0xl17bR4GgVi9dAHHTofwg==",
+      "path": "microsoft.extensions.fileproviders.abstractions/9.0.0-preview.7.24405.7",
+      "hashPath": "microsoft.extensions.fileproviders.abstractions.9.0.0-preview.7.24405.7.nupkg.sha512"
+    },
+    "Microsoft.Extensions.FileProviders.Physical/9.0.0-preview.7.24405.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9k8p0oQWnliCUMjRCM2YxFjGNX+A0a6XpyxgIc8VAUO05ecMpXk9egn1Awd1zYy1iwLqM7dCW8S/GFimOh4eog==",
+      "path": "microsoft.extensions.fileproviders.physical/9.0.0-preview.7.24405.7",
+      "hashPath": "microsoft.extensions.fileproviders.physical.9.0.0-preview.7.24405.7.nupkg.sha512"
+    },
+    "Microsoft.Extensions.FileSystemGlobbing/9.0.0-preview.7.24405.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BEHNc85v3Rdux4HzkAzhfaBilMY+N5mZlvTsT08Ie+bTILRroeOip0QtiVLTVVmFjKtDu5LfQoJkFmPvjdD1HQ==",
+      "path": "microsoft.extensions.filesystemglobbing/9.0.0-preview.7.24405.7",
+      "hashPath": "microsoft.extensions.filesystemglobbing.9.0.0-preview.7.24405.7.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Abstractions/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kmn78+LPVMOWeITUjIlfxUPDsI0R6G0RkeAMBmQxAJ7vBJn4q2dTva7pWi65ceN5vPGjJ9q/Uae2WKgvfktJAw==",
+      "path": "microsoft.extensions.logging.abstractions/7.0.0",
+      "hashPath": "microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Primitives/9.0.0-preview.7.24405.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CsC3tAnJFsrXwhiUQzP3hlFGLEUC5DEE8WPxhe/j96h6/xD5U8Kpx/hQ0OwWbkNg1BX00Nf7qXbYV268G18cIQ==",
+      "path": "microsoft.extensions.primitives/9.0.0-preview.7.24405.7",
+      "hashPath": "microsoft.extensions.primitives.9.0.0-preview.7.24405.7.nupkg.sha512"
     },
     "Newtonsoft.Json/13.0.3": {
       "type": "package",
@@ -110,6 +382,20 @@
       "path": "system.collections.immutable/7.0.0",
       "hashPath": "system.collections.immutable.7.0.0.nupkg.sha512"
     },
+    "System.IO.Pipelines/9.0.0-preview.7.24405.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ucbel9Qn222FZNK3HuAHSdYCa2ayYIY02vzbBh1K9NgJpOENyMjU4BUALGTelXq8c4e0EfOswkM5kPcytgsrAw==",
+      "path": "system.io.pipelines/9.0.0-preview.7.24405.7",
+      "hashPath": "system.io.pipelines.9.0.0-preview.7.24405.7.nupkg.sha512"
+    },
+    "System.Memory/4.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
+      "path": "system.memory/4.5.5",
+      "hashPath": "system.memory.4.5.5.nupkg.sha512"
+    },
     "System.Speech/9.0.0-preview.7.24405.7": {
       "type": "package",
       "serviceable": true,
@@ -117,12 +403,54 @@
       "path": "system.speech/9.0.0-preview.7.24405.7",
       "hashPath": "system.speech.9.0.0-preview.7.24405.7.nupkg.sha512"
     },
+    "System.Text.Encodings.Web/9.0.0-preview.7.24405.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zrapRzQMn0vnk7Ztk8RtJwu4vG1RoOkO0ZozBppgsrfn9JM03E1cT3oUqbvDCtLHxyvu20W25H+0xdYVPeGgxg==",
+      "path": "system.text.encodings.web/9.0.0-preview.7.24405.7",
+      "hashPath": "system.text.encodings.web.9.0.0-preview.7.24405.7.nupkg.sha512"
+    },
+    "System.Text.Json/9.0.0-preview.7.24405.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yyyDS4GQyWiBNfvZW+67j/77dGR/iFWbKD1EfXaUw0XSuT98s2ONG0UqigFF+sJC6L40ef9SonQadYOGCoKrfA==",
+      "path": "system.text.json/9.0.0-preview.7.24405.7",
+      "hashPath": "system.text.json.9.0.0-preview.7.24405.7.nupkg.sha512"
+    },
     "TikTokLive_Sharp/1.2.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-gugpC4e2bXkJw31ttrlOH6IBiothtFO4QreO57DYcOx70Ycw3Z7Nx8g6gCSR81SjjPyhSpzsIfHRHz252wbyDQ==",
       "path": "tiktoklive_sharp/1.2.0",
       "hashPath": "tiktoklive_sharp.1.2.0.nupkg.sha512"
+    },
+    "TwitchLib.Client/4.0.0-preview-fd131763416cb9f1a31705ca609566d7e7e7fac8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-l110dy01y6C1ECmk2c1A9I2+O57IBe7P29V8iylxPCqfNDcrbJjP67Mf86kiWpofXn9sHuN6GgNihhV986g5kw==",
+      "path": "twitchlib.client/4.0.0-preview-fd131763416cb9f1a31705ca609566d7e7e7fac8",
+      "hashPath": "twitchlib.client.4.0.0-preview-fd131763416cb9f1a31705ca609566d7e7e7fac8.nupkg.sha512"
+    },
+    "TwitchLib.Client.Enums/4.0.0-preview-fd131763416cb9f1a31705ca609566d7e7e7fac8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yV8fbmaxixp0cVElj3aYQfX4d2jPfeDe4xphZpAuesag5YsL92RHHLYDKu5aOafXlNDBQ14mQc3r+uXibN2sTQ==",
+      "path": "twitchlib.client.enums/4.0.0-preview-fd131763416cb9f1a31705ca609566d7e7e7fac8",
+      "hashPath": "twitchlib.client.enums.4.0.0-preview-fd131763416cb9f1a31705ca609566d7e7e7fac8.nupkg.sha512"
+    },
+    "TwitchLib.Client.Models/4.0.0-preview-fd131763416cb9f1a31705ca609566d7e7e7fac8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2owS7RTLgwt+bfrZp5hiMQq6YLVEgV54EeU1UInoNfxrVScBBmLJmVNKhawyDjR8OZUZ5BOdGI7ny4xIjGzr4w==",
+      "path": "twitchlib.client.models/4.0.0-preview-fd131763416cb9f1a31705ca609566d7e7e7fac8",
+      "hashPath": "twitchlib.client.models.4.0.0-preview-fd131763416cb9f1a31705ca609566d7e7e7fac8.nupkg.sha512"
+    },
+    "TwitchLib.Communication/2.0.0-preview-b5bf10f12e8d7c9d0a82f7f5026dccdf97a97c41": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-S9tnBDq4Nr4K2QU+717YYf6OL5gzwVfSOWIrdDxdVwvXf1BSRRKXplGFGrgUnifWdEb23s/yLjawDNV51PTT+w==",
+      "path": "twitchlib.communication/2.0.0-preview-b5bf10f12e8d7c9d0a82f7f5026dccdf97a97c41",
+      "hashPath": "twitchlib.communication.2.0.0-preview-b5bf10f12e8d7c9d0a82f7f5026dccdf97a97c41.nupkg.sha512"
     }
   }
 }
