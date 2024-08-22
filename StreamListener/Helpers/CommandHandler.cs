@@ -1,11 +1,13 @@
 ﻿using System.Speech.Synthesis;
+using NAudio.Wave;
 using StreamListener.Helpers.Payloads;
 
 namespace StreamListener.Helpers;
 
 public class CommandHandler
 {
-    static SpeechSynthesizer synth = null;
+    private static SpeechSynthesizer synth = null;
+    private static SemaphoreSlim semaphore = new SemaphoreSlim(1, 1);
     
     public static async void OnCommand(string username, string nickname, bool follower, string command)
     {
@@ -32,14 +34,80 @@ public class CommandHandler
         }
     }
 
-    private static void TextToSpeech(string name, string message)
+    private static void StartTTSThread()
+    {
+        Thread ttsThread = new Thread(() => WaitForTTS());
+        ttsThread.Start();
+    }
+
+    private static void WaitForTTS()
+    {
+        synth = new SpeechSynthesizer();
+        synth.Volume = 75;
+        synth.SelectVoiceByHints(VoiceGender.Female);
+        synth.SetOutputToDefaultAudioDevice();
+
+        string name = "";
+        string message = "";
+        
+        if (message.Length > 100)
+        {
+            message = message.Substring(0, 100);
+        }
+        
+        using (var memoryStream = new MemoryStream())
+        {
+            // Set the output to a memory stream
+            synth.SetOutputToWaveStream(memoryStream);
+
+            // Handle the message with the synthesizer
+            switch (message)
+            {
+                case "cat":
+                    synth.Speak("mooooo");
+                    break;
+                case "cow":
+                    synth.Speak("meow");
+                    break;
+                case "bunker":
+                    synth.Speak("woof");
+                    break;
+                default:
+                    synth.Speak($"{name} says {message}");
+                    break;
+            }
+
+            // Reset the memory stream position for reading
+            memoryStream.Position = 0;
+            /*
+            // Play the audio through a specific device asynchronously
+            await Task.Run(() =>
+            {
+                using (var waveOut = new WaveOutEvent())
+                {
+                    waveOut.DeviceNumber = 1;
+                    using (var waveProvider = new WaveFileReader(memoryStream))
+                    {
+                        waveOut.Init(waveProvider);
+                        waveOut.Play();
+                        while (waveOut.PlaybackState == PlaybackState.Playing)
+                        {
+                            Thread.Sleep(100);  // Keep the task alive during playback
+                        }
+                    }
+                }
+            });
+            */
+        }
+    }
+
+    private static async void TextToSpeech(string name, string message)
     {
         if (synth == null)
         {
             synth = new SpeechSynthesizer();
             synth.Volume = 75;
             synth.SelectVoiceByHints(VoiceGender.Female);
-            synth.SetOutputToDefaultAudioDevice();
         }
 
         if (message.Length > 100)
@@ -47,20 +115,56 @@ public class CommandHandler
             message = message.Substring(0, 100);
         }
 
-        switch (message)
+        await semaphore.WaitAsync();  // Wait for the previous task to finish
+        try
         {
-            case "cat":
-                synth.SpeakAsync("mooooo");
-                break;
-            case "cow":
-                synth.SpeakAsync("meow");
-                break;
-            case "bunker":
-                synth.SpeakAsync("woof");
-                break;
-            default:
-                synth.SpeakAsync($"{name} says {message}");
-                break;
+            using (var memoryStream = new MemoryStream())
+            {
+                // Set the output to a memory stream
+                synth.SetOutputToWaveStream(memoryStream);
+
+                // Handle the message with the synthesizer
+                switch (message)
+                {
+                    case "cat":
+                        synth.Speak("mooooo");
+                        break;
+                    case "cow":
+                        synth.Speak("meow");
+                        break;
+                    case "bunker":
+                        synth.Speak("woof");
+                        break;
+                    default:
+                        synth.Speak($"{name} says {message}");
+                        break;
+                }
+
+                // Reset the memory stream position for reading
+                memoryStream.Position = 0;
+
+                // Play the audio through a specific device asynchronously
+                await Task.Run(() =>
+                {
+                    using (var waveOut = new WaveOutEvent())
+                    {
+                        waveOut.DeviceNumber = 1;
+                        using (var waveProvider = new WaveFileReader(memoryStream))
+                        {
+                            waveOut.Init(waveProvider);
+                            waveOut.Play();
+                            while (waveOut.PlaybackState == PlaybackState.Playing)
+                            {
+                                Thread.Sleep(100);  // Keep the task alive during playback
+                            }
+                        }
+                    }
+                });
+            }
+        }
+        finally
+        {
+            semaphore.Release();  // Release the semaphore when done
         }
     }
 }

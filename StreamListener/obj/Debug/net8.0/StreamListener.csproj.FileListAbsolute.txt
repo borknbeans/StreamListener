@@ -39,3 +39,9 @@ C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\Twit
 C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\TwitchLib.Client.Models.dll
 C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\TwitchLib.Communication.dll
 C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\NAudio.dll
+C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\NAudio.Asio.dll
+C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\NAudio.Core.dll
+C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\NAudio.Midi.dll
+C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\NAudio.Wasapi.dll
+C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\NAudio.WinMM.dll
