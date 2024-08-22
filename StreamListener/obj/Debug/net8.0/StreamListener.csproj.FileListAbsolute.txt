@@ -19,3 +19,5 @@ C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\TikT
 C:\Users\ebork\RiderProjects\StreamListener\StreamListener\obj\Debug\net8.0\StreamListener.csproj.AssemblyReference.cache
 C:\Users\ebork\RiderProjects\StreamListener\StreamListener\obj\Debug\net8.0\StreamListener.csproj.CopyComplete
 C:\Users\ebork\RiderProjects\StreamListener\StreamListener\obj\Debug\net8.0\StreamListener.sourcelink.json
+C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\System.Speech.dll
+C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Speech.dll

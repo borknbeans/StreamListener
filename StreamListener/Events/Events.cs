@@ -13,5 +13,6 @@ public enum Events
     OnSubscribe,
     OnLike,
     OnGiftMessage,
-    OnEmote
+    OnEmote,
+    OnCommand
 }

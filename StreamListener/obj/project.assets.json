@@ -63,6 +63,28 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "System.Speech/9.0.0-preview.7.24405.7": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/System.Speech.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "TikTokLive_Sharp/1.2.0": {
         "type": "package",
         "dependencies": {
@@ -177,6 +199,34 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.Speech/9.0.0-preview.7.24405.7": {
+      "sha512": "7ksl0NHSgEz1Me1qJu/3eBFtqv1mGgCnurQTFqEg6PCuENWZiCljZi3J3u5HCrO9DqojL5FD4ebJF0/Jet9NOg==",
+      "type": "package",
+      "path": "system.speech/9.0.0-preview.7.24405.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Speech.targets",
+        "lib/net462/_._",
+        "lib/net8.0/System.Speech.dll",
+        "lib/net8.0/System.Speech.xml",
+        "lib/net9.0/System.Speech.dll",
+        "lib/net9.0/System.Speech.xml",
+        "lib/netstandard2.0/System.Speech.dll",
+        "lib/netstandard2.0/System.Speech.xml",
+        "runtimes/win/lib/net8.0/System.Speech.dll",
+        "runtimes/win/lib/net8.0/System.Speech.xml",
+        "runtimes/win/lib/net9.0/System.Speech.dll",
+        "runtimes/win/lib/net9.0/System.Speech.xml",
+        "system.speech.9.0.0-preview.7.24405.7.nupkg.sha512",
+        "system.speech.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "TikTokLive_Sharp/1.2.0": {
       "sha512": "gugpC4e2bXkJw31ttrlOH6IBiothtFO4QreO57DYcOx70Ycw3Z7Nx8g6gCSR81SjjPyhSpzsIfHRHz252wbyDQ==",
       "type": "package",
@@ -195,6 +245,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "System.Speech >= 9.0.0-preview.7.24405.7",
       "TikTokLive_Sharp >= 1.2.0"
     ]
   },
@@ -219,7 +270,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.bepinex.dev/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
@@ -237,6 +289,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "System.Speech": {
+            "target": "Package",
+            "version": "[9.0.0-preview.7.24405.7, )"
+          },
           "TikTokLive_Sharp": {
             "target": "Package",
             "version": "[1.2.0, )"

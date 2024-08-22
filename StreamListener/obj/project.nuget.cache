@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "EuA+vXqMWdk=",
+  "dgSpecHash": "st3xZkKvjIs=",
   "success": true,
   "projectFilePath": "C:\\Users\\ebork\\RiderProjects\\StreamListener\\StreamListener\\StreamListener.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\ebork\\.nuget\\packages\\protobuf-net\\3.2.26\\protobuf-net.3.2.26.nupkg.sha512",
     "C:\\Users\\ebork\\.nuget\\packages\\protobuf-net.core\\3.2.26\\protobuf-net.core.3.2.26.nupkg.sha512",
     "C:\\Users\\ebork\\.nuget\\packages\\system.collections.immutable\\7.0.0\\system.collections.immutable.7.0.0.nupkg.sha512",
+    "C:\\Users\\ebork\\.nuget\\packages\\system.speech\\9.0.0-preview.7.24405.7\\system.speech.9.0.0-preview.7.24405.7.nupkg.sha512",
     "C:\\Users\\ebork\\.nuget\\packages\\tiktoklive_sharp\\1.2.0\\tiktoklive_sharp.1.2.0.nupkg.sha512"
   ],
   "logs": []

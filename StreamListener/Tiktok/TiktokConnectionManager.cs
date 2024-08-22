@@ -1,17 +1,21 @@
 ﻿using StreamListener.Tiktok;
 using TikTokLiveSharp.Client;
+using TikTokLiveSharp.Client.Config;
 
 namespace StreamListener.Helpers;
 
 public class TiktokConnectionManager
 {
-    private const string TiktokName = "jprospering";
+    private const string TiktokName = "borknbean";
     
     public static async Task ConnectToTiktok()
     {
         try
         {
-            TikTokLiveClient client = new TikTokLiveClient(TiktokName, "");
+            ClientSettings settings = new ClientSettings();
+            settings.HandleExistingMessagesOnConnect = false;
+            
+            TikTokLiveClient client = new TikTokLiveClient(TiktokName, "", settings);
             client.OnConnected += TiktokHandlers.OnConnected;
             client.OnDisconnected += TiktokHandlers.OnDisconnected;
             client.OnRoomUpdate += TiktokHandlers.OnViewerData;

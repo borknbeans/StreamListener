@@ -1,4 +1,5 @@
-﻿using StreamListener.Helpers;
+﻿using System.Speech.Synthesis;
+using StreamListener.Helpers;
 using StreamListener.Helpers.Payloads;
 using TikTokLiveSharp.Client;
 using TikTokLiveSharp.Events;
@@ -35,6 +36,11 @@ public class TiktokHandlers
     public static async void OnComment(TikTokLiveClient sender, Chat e)
     {
         Logger.Info($"{e.Sender.UniqueId}: {e.Message}", ConsoleColor.Yellow);
+        
+        if (e.Message.StartsWith("!"))
+        {
+            CommandHandler.OnCommand(e.Sender.UniqueId, e.Sender.NickName, e.Sender.Follow_Info.FollowStatus == 1, e.Message.Substring(1));
+        }
         var message = new CommentMessage
         {
             Identifier = e.Sender.UniqueId,
@@ -70,9 +76,22 @@ public class TiktokHandlers
         //Logger.Info($"{e.User.UniqueId} subscribed!", ConsoleColor.DarkCyan);
     }
 
-    public static void OnLike(TikTokLiveClient sender, Like e)
+    public static async void OnLike(TikTokLiveClient sender, Like e)
     {
         //Logger.Info($"{e.Sender.UniqueId} liked!", ConsoleColor.Red);
+        //Logger.Info($"{e.Sender.UniqueId} liked {e.Count}x! Total likes: {e.Total}", ConsoleColor.Red);
+        var message = new LikeMessage
+        {
+            Identifier = e.Sender.UniqueId,
+            Follower = e.Sender.IsFollower,
+            Payload = new LikePayload
+            {
+                Count = e.Count,
+                Total = e.Total
+            }
+        };
+        
+        await SubscriptionManager.NotifySubscriptions(message);
     }
 
     public static async void OnGiftMessage(TikTokLiveClient sender, TikTokLiveSharp.Events.GiftMessage e)

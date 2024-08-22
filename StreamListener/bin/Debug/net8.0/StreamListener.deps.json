@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "StreamListener/1.0.0": {
         "dependencies": {
+          "System.Speech": "9.0.0-preview.7.24405.7",
           "TikTokLive_Sharp": "1.2.0"
         },
         "runtime": {
@@ -45,6 +46,22 @@
         }
       },
       "System.Collections.Immutable/7.0.0": {},
+      "System.Speech/9.0.0-preview.7.24405.7": {
+        "runtime": {
+          "lib/net8.0/System.Speech.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.40507"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/System.Speech.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.40507"
+          }
+        }
+      },
       "TikTokLive_Sharp/1.2.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.3",
@@ -92,6 +109,13 @@
       "sha512": "sha512-dQPcs0U1IKnBdRDBkrCTi1FoajSTBzLcVTpjO4MBCMC7f4pDOIPzgBoX8JjG7X6uZRJ8EBxsi8+DR1JuwjnzOQ==",
       "path": "system.collections.immutable/7.0.0",
       "hashPath": "system.collections.immutable.7.0.0.nupkg.sha512"
+    },
+    "System.Speech/9.0.0-preview.7.24405.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7ksl0NHSgEz1Me1qJu/3eBFtqv1mGgCnurQTFqEg6PCuENWZiCljZi3J3u5HCrO9DqojL5FD4ebJF0/Jet9NOg==",
+      "path": "system.speech/9.0.0-preview.7.24405.7",
+      "hashPath": "system.speech.9.0.0-preview.7.24405.7.nupkg.sha512"
     },
     "TikTokLive_Sharp/1.2.0": {
       "type": "package",
