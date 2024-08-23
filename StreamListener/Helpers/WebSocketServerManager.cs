@@ -40,22 +40,31 @@ public class WebSocketServerManager
     
     private static async Task HandleIncomingWebSocketMessages(WebSocket webSocket)
     {
-        var buffer = new byte[1024 * 4];
-        
-        // Wait for the first message from the client
-        var result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
-
-        while (result.MessageType != WebSocketMessageType.Close)
+        try
         {
-            // Decode the received message
-            var message = Encoding.UTF8.GetString(buffer, 0, result.Count);
-            HandleMessage(webSocket, message);
-            
-            result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+            var buffer = new byte[1024 * 4];
+
+            // Wait for the first message from the client
+            var result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+
+            while (result.MessageType != WebSocketMessageType.Close)
+            {
+                // Decode the received message
+                var message = Encoding.UTF8.GetString(buffer, 0, result.Count);
+                HandleMessage(webSocket, message);
+
+                result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+            }
+
+            // Close the websocket connection
+            await webSocket.CloseAsync(WebSocketCloseStatus.NormalClosure, "Closed by server", CancellationToken.None);
+        }
+        catch (WebSocketException e)
+        {
+            Console.WriteLine("Web Socket disconnected unexpectedly");
+            await SubscriptionManager.RemoveAllWebSocketsSubscriptions(webSocket);
         }
         
-        // Close the websocket connection
-        await webSocket.CloseAsync(WebSocketCloseStatus.NormalClosure, "Closed by server", CancellationToken.None);
     }
 
     private static void HandleMessage(WebSocket webSocket, string message)

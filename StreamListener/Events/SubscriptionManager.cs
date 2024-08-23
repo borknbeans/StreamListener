@@ -47,6 +47,15 @@ public class SubscriptionManager
                 CancellationToken.None);
         }
     }
+
+    public static async Task RemoveAllWebSocketsSubscriptions(WebSocket webSocket)
+    {
+        foreach (var key in _subscriptions.Keys)
+        {
+            Console.WriteLine($"Removing subscription for {key}");
+            _subscriptions[key].Remove(webSocket);
+        }
+    }
     
     public static async Task NotifySubscriptions(Events eventType, byte[] data)
     {

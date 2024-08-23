@@ -1,6 +1,7 @@
 ﻿using StreamListener.Tiktok;
 using TikTokLiveSharp.Client;
 using TikTokLiveSharp.Client.Config;
+using TikTokLiveSharp.Errors.Connections;
 
 namespace StreamListener.Helpers;
 
@@ -31,9 +32,9 @@ public class TiktokConnectionManager
 
             await client.RunAsync(new CancellationToken());
         }
-        catch (Exception e)
+        catch (LiveNotFoundException e)
         {
-            Console.WriteLine(e);
+            Console.WriteLine("Failed to connect to TikTok");
         }
     }
 }
