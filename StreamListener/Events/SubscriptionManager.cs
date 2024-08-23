@@ -52,7 +52,7 @@ public class SubscriptionManager
     {
         foreach (var key in _subscriptions.Keys)
         {
-            Console.WriteLine($"Removing subscription for {key}");
+            Logger.Warn($"Removing subscription for {key}");
             _subscriptions[key].Remove(webSocket);
         }
     }

@@ -61,7 +61,7 @@ public class WebSocketServerManager
         }
         catch (WebSocketException e)
         {
-            Console.WriteLine("Web Socket disconnected unexpectedly");
+            Logger.Warn("Web Socket disconnected unexpectedly", ConsoleColor.Red);
             await SubscriptionManager.RemoveAllWebSocketsSubscriptions(webSocket);
         }
         

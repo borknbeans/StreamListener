@@ -11,7 +11,7 @@ public class TwitchConnectionManager
     {
         if (accessToken == null)
         {
-            Logger.Warn("No access token provided");
+            Logger.Warn("No access token provided", ConsoleColor.Red);
             return;
         }
         
@@ -27,11 +27,11 @@ public class TwitchConnectionManager
             
             client.Connect();
             
-            Logger.Info("Connected to Twitch");
+            Logger.Info("Connected to Twitch", ConsoleColor.Green);
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.Warn("Failed to connect to Twitch", ConsoleColor.Red);
         }
     }
 }

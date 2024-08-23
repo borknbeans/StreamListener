@@ -45,3 +45,10 @@ C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\NAud
 C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\NAudio.Midi.dll
 C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\NAudio.Wasapi.dll
 C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\NAudio.WinMM.dll
+C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\TwitchLib.Api.dll
+C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\TwitchLib.Api.Core.dll
+C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\TwitchLib.Api.Core.Enums.dll
+C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\TwitchLib.Api.Core.Interfaces.dll
+C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\TwitchLib.Api.Core.Models.dll
+C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\TwitchLib.Api.Helix.dll
+C:\Users\ebork\RiderProjects\StreamListener\StreamListener\bin\Debug\net8.0\TwitchLib.Api.Helix.Models.dll

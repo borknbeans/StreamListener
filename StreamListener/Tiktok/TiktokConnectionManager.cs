@@ -34,7 +34,7 @@ public class TiktokConnectionManager
         }
         catch (LiveNotFoundException e)
         {
-            Console.WriteLine("Failed to connect to TikTok");
+            Logger.Warn("Failed to connect to TikTok", ConsoleColor.Red);
         }
     }
 }

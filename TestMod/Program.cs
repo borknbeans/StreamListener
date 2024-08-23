@@ -13,7 +13,7 @@ public class Program
     
     public static async Task Main(string[] args)
     {
-        /*
+        
         var webSocket = new ClientWebSocket();
         await webSocket.ConnectAsync(new Uri("ws://localhost:5000"), CancellationToken.None);
         Console.WriteLine("Connected to server...");
@@ -32,8 +32,9 @@ public class Program
         Console.WriteLine("Subscription message sent to the server.");
         
         await HandleIncomingMessages(webSocket);
-        */
+        
 
+        /*
         while (true)
         {
             string result = Console.ReadLine();
@@ -45,6 +46,7 @@ public class Program
                 TextToSpeech(result.Substring(0, result.IndexOf(':') - 1), result.Substring(result.IndexOf(' ') + 1));
             }
         }
+        */
     }
     
     private static void TextToSpeech(string name, string message)
@@ -104,7 +106,7 @@ public class Program
         }
     }
 
-    /*
+    
     private static async Task HandleIncomingMessages(ClientWebSocket webSocket)
     {
         var buffer = new byte[1024 * 4];
@@ -131,5 +133,5 @@ public class Program
         public String Type = "subscribe";
         public List<string> Events { get; set; }
     }
-    */
+    
 }

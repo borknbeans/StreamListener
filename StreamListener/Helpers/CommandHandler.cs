@@ -9,12 +9,13 @@ public class CommandHandler
     private static SpeechSynthesizer synth = null;
     private static SemaphoreSlim semaphore = new SemaphoreSlim(1, 1);
     
-    public static async void OnCommand(string username, string nickname, bool follower, string command)
+    public static async void OnCommand(Sources source, string username, string nickname, bool follower, string command)
     {
         List<string> args = command.ToLower().Split(' ').ToList();
         
-        if (args[0].Equals("tts") && follower)
+        if (args[0].Equals("tts"))
         {
+            if (Sources.Tiktok == source) { return; }
             TextToSpeech(nickname, command.Substring(command.IndexOf(' ') + 1));
         }
         else
@@ -22,6 +23,7 @@ public class CommandHandler
             var message = new CommandMessage
             {
                 Identifier = username,
+                Source = source,
                 Follower = follower,
                 Payload = new CommandPayload
                 {

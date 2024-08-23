@@ -12,11 +12,12 @@ public class TwitchHandlers
         
         if (e.ChatMessage.Message.StartsWith("!"))
         {
-            CommandHandler.OnCommand(e.ChatMessage.Username, e.ChatMessage.Username, true, e.ChatMessage.Message.Substring(1));
+            CommandHandler.OnCommand(Sources.Twitch, e.ChatMessage.Username, e.ChatMessage.Username, true, e.ChatMessage.Message.Substring(1));
         }
         var message = new CommentMessage
         {
             Identifier = e.ChatMessage.Username,
+            Source = Sources.Twitch,
             Follower = true,
             Payload = new CommentPayload
             {

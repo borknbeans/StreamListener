@@ -10,7 +10,7 @@ public class TiktokHandlers
 {
     public static void OnConnected(TikTokLiveClient sender, bool e)
     {
-        Logger.Info($"Connected to TikTok");
+        Logger.Info($"Connected to TikTok", ConsoleColor.Green);
     }
 
     public static void OnDisconnected(TikTokLiveClient sender, bool e)
@@ -39,11 +39,12 @@ public class TiktokHandlers
         
         if (e.Message.StartsWith("!"))
         {
-            CommandHandler.OnCommand(e.Sender.UniqueId, e.Sender.NickName, e.Sender.Follow_Info.FollowStatus == 1, e.Message.Substring(1));
+            CommandHandler.OnCommand(Sources.Tiktok, e.Sender.UniqueId, e.Sender.NickName, e.Sender.Follow_Info.FollowStatus == 1, e.Message.Substring(1));
         }
         var message = new CommentMessage
         {
             Identifier = e.Sender.UniqueId,
+            Source = Sources.Tiktok,
             Follower = e.Sender.IsFollower,
             Payload = new CommentPayload
             {
@@ -60,6 +61,7 @@ public class TiktokHandlers
         var message = new FollowerMessage
         {
             Identifier = e.User?.UniqueId,
+            Source = Sources.Tiktok,
             Follower = e.User?.IsFollower ?? false,
         };
         
@@ -83,6 +85,7 @@ public class TiktokHandlers
         var message = new LikeMessage
         {
             Identifier = e.Sender.UniqueId,
+            Source = Sources.Tiktok,
             Follower = e.Sender.IsFollower,
             Payload = new LikePayload
             {
@@ -100,6 +103,7 @@ public class TiktokHandlers
         var message = new Helpers.GiftMessage
         {
             Identifier = e.User.UniqueId,
+            Source = Sources.Tiktok,
             Follower = e.User.IsFollower,
             Payload = new GiftPayload
             {

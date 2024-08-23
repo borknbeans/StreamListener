@@ -1,0 +1,76 @@
+# .NET Core / .NET Framework / ASP.NET
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.nuget
+*.log
+*.user
+*.lock.json
+*.xml
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider project files
+.idea/
+*.sln.iml
+
+# Rider plugin folders
+.idea_modules/
+
+# Rider workspace files
+*.ipr
+*.iws
+*.idea/
+.idea/
+
+# User-specific files
+*.rsuser
+*.resharperuser
+*.DotSettings.user
+
+# Rider settings and caches
+.idea/.idea.*
+.idea/.ideaModules.xml
+.idea/.idea_modules
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries/
+.idea/shelf/
+.idea/vcs.xml
+.idea/jarRepositories.xml
+.idea/codeStyles/
+.idea/misc.xml
+
+# Build outputs
+*.build/
+*.buildlog
+*.bak
+*.cache
+
+# Rider run/debug configurations
+.idea/runConfigurations/
+
+# Rider file-based caches
+.idea/compile-server/
+.idea/dataSources/
+.idea/datasource-local.xml
+.idea/sqlDataSources.xml
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/sqlDataSources.xml
+.idea/sql/datasource.xml
+
+# Ignore Rider's internal code inspection caches
+.idea/inspectionProfiles/
+
+# Ignore the .dotnet user folder
+.dotnet/
+
+# Ignore build results
+build/
+artifacts/
+_release/
+dist/
